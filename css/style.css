@@ -1,0 +1,143 @@
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: calc(100vh - 20px)
+}
+
+main {
+	width: 100%;
+	max-width: 1400px;
+	border: 2px solid black;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+}
+
+#lside {
+	background-color: lightgreen;
+	width: 394px;
+}
+#rside {
+	background-color: lightpink;
+	width: 394px;
+}
+
+#team1, #team2 {
+	margin: 8px;
+	display: grid;
+	grid-template-columns: repeat(4, 90px);
+	grid-column-gap: 6px;
+	grid-row-gap: 6px;
+}
+
+.cell {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 90px;
+	max-width: 90px;
+	min-height: 120px;
+	max-height: 120px;
+	border: 1px solid black;
+	overflow: hidden;
+	cursor: pointer;
+}
+.cell:hover {
+	box-shadow: 0 0 10px 0 black;
+}
+.cell img {
+	height: 100%;
+	min-height: 88px;
+	min-width: 88px;
+	transition: transform 0.3s linear;
+}
+.cell h4 {
+	margin: 6px;
+}
+
+
+#battle-section {
+	background-color: lightblue;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	min-width: 460px;
+	max-width: 620px;
+	padding: 30px 10px 20px;
+}
+
+#battle-header {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+#battle-header h1 {
+	color: saddlebrown;
+}
+
+#battle-data {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin: 80px 10px 40px;
+}
+.battle-cell {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid black;
+	width: 150px;
+	height: 190px;
+	box-shadow: 0 0 15px 0 black;
+	overflow: hidden;
+}
+.battle-cell span {
+	font-size: 18px;
+	margin: 8px;
+	text-align: center;
+}
+.battle-cell img {
+	height: 100%;
+	width: 148px;
+}
+.battle-cell h4 {
+	height: 40px;
+	margin: 8px;
+	font-size: 18px;
+}
+
+#fight-btn {
+	background-color: orangered;
+	padding: 10px 20px;
+	font-size: 18px;
+	font-weight: bold;
+	outline: none;
+	border: 2px solid black;
+	text-transform: uppercase;
+	cursor: pointer;
+	box-shadow: 0 0 6px 0 black;
+	transition: background-color 0.2s linear;
+}
+#fight-btn:hover {
+	background-color: red;
+}
+
+#battle-result {
+	text-align: center;
+	margin: 20px 10px;
+}
